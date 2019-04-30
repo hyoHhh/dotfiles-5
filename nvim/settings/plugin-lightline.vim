@@ -2,9 +2,11 @@ let g:lightline = {
    \ 'colorscheme': 'gruvbox',
    \ 'mode_map': { 'c': 'NORMAL' },
    \ 'active': {
-   \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'currentfunction', 'fugitive', 'filename' ] ]
    \ },
    \ 'component_function': {
+   \   'cocstatus': 'coc#status',
+   \   'currentfunction': 'CocCurrentFunction',
    \   'modified': 'MyModified',
    \   'readonly': 'MyReadonly',
    \   'fugitive': 'MyFugitive',

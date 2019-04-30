@@ -3,7 +3,6 @@ Plug 'AndrewRadev/splitjoin.vim' " splits or joins lines more smartly
 Plug 'Keithbsmiley/investigate.vim' " for looking up documentation
 Plug 'MarcWeber/vim-addon-local-vimrc' " local (per project) vim configs
 Plug 'MarcWeber/vim-addon-mw-utils' " Vim Script Addons that some plugins depend on
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Async auto complete
 Plug 'bogado/file-line' " Enables opening a file in a given line
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux windows
 Plug 'editorconfig/editorconfig-vim' " per project code style configs (tabs, spaces, line breaks, etc)
