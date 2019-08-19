@@ -26,7 +26,6 @@ function! s:denite_filter_my_settings() abort
   inoremap <silent><buffer><expr> <C-t> denite#do_map('do_action', 'tabswitch')
   inoremap <silent><buffer><expr> <C-o> denite#do_map('do_action', 'switch')
   inoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
-  call deoplete#custom#buffer_option('auto_complete', v:false)
   imap <silent><buffer> <ESC> <Plug>(denite_filter_quit)
 endfunction
 
