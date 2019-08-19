@@ -2,7 +2,7 @@ let g:lightline = {
    \ 'colorscheme': 'gruvbox',
    \ 'mode_map': { 'c': 'NORMAL' },
    \ 'active': {
-   \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'fugitive', 'filename' ] ]
    \ },
    \ 'component_function': {
    \   'modified': 'MyModified',
@@ -13,10 +13,13 @@ let g:lightline = {
    \   'filetype': 'MyFiletype',
    \   'fileencoding': 'MyFileencoding',
    \   'mode': 'MyMode',
+   \   'cocstatus': 'coc#status',
    \ },
    \ 'separator': { 'left': '⮀', 'right': '⮂' },
    \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
 \ }
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 function! MyModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
