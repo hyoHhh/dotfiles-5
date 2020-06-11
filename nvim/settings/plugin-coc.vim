@@ -95,6 +95,9 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -102,3 +105,4 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<c-k>'
+
