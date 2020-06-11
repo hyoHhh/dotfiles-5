@@ -11,5 +11,6 @@
     "typescript.tsx",
     "graphql",
     "markdown"
-  ]
+  ],
+  "coc.source.file.trimSameExts": []
 }
